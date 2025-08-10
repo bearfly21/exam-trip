@@ -4,7 +4,7 @@ from .models import *
 class TripSerializer(ModelSerializer):
     class Meta:
         model = Trip
-        fieds = '__all__'
+        fields = '__all__'
 
 class CompanionSerializer(ModelSerializer):
     class Meta:

@@ -2,8 +2,10 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path('', create_trip_view),
-    path('create_trip', create_trip_view),
-    path('update_trip', edit_delete_api_view),
-    path('delete_trip', edit_delete_api_view),
+    path('trips/', create_trip_view, name='create-trip'),
+    path('trips/<int:pk>/', trip_edit_delete_api_view, name='edit-delete-trip'),
+
+    path('companions/', create_companion_view, name='create-companion'),
+    path('companions/<int:pk>/', companion_edit_delete_api_view, name='edit-delete-companion'),
 ]
+
